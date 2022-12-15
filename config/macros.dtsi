@@ -2,38 +2,54 @@ macro_ctrl_b: macro_ctrl_b{
 compatible = "zmk,behavior-macro";
 label = "macro_ctrl_b";
 #binding-cells = <0>;
-bindings = <&sk RCTRL>, <&kp B>;
+wait-ms = <10>;
+bindings = <&macro_press &kp RCTRL>
+	, <&macro_tap &kp B>
+	, <&macro_release &kp RCTRL>
+	;
 };
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
 label = "macro_quotes";
 #binding-cells = <0>;
+wait-ms = <10>;
 bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
 };
 macro_dquotes: macro_dquotes{
 compatible = "zmk,behavior-macro";
 label = "macro_dquotes";
 #binding-cells = <0>;
+wait-ms = <10>;
 bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
 };
 macro_braces: macro_braces{
 compatible = "zmk,behavior-macro";
 label = "macro_braces";
 #binding-cells = <0>;
+wait-ms = <10>;
 bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
 };
 macro_parens: macro_parens{
 compatible = "zmk,behavior-macro";
 label = "macro_parens";
 #binding-cells = <0>;
+wait-ms = <10>;
 bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
 };
 macro_brackets: macro_brackets{
 compatible = "zmk,behavior-macro";
 label = "macro_brackets";
 #binding-cells = <0>;
+wait-ms = <10>;
 bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
 };
+macro_carrots: macro_carrots{
+compatible = "zmk,behavior-macro";
+label = "macro_carrots";
+#binding-cells = <10>
+wait-ms = <10>;
+bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>, <&kp LEFT>;
+}
 macro_kinesis: macro_kinesis{
 compatible = "zmk,behavior-macro";
 label = "macro_kinesis";
