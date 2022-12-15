@@ -31,7 +31,7 @@ bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
 };
 macro_carets: macro_carets{
 compatible = "zmk,behavior-macro";
-label = "macro_parens";
+label = "macro_carets";
 #binding-cells = <0>;
 wait-ms = <1>;
 bindings = <&kp LT>, <&kp GT>, <&kp LEFT>;
