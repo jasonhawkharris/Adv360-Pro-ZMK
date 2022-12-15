@@ -43,13 +43,6 @@ label = "macro_brackets";
 wait-ms = <10>;
 bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
 };
-macro_carrots: macro_carrots{
-compatible = "zmk,behavior-macro";
-label = "macro_carrots";
-#binding-cells = <10>;
-wait-ms = <10>;
-bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>, <&kp LEFT>;
-};
 macro_kinesis: macro_kinesis{
 compatible = "zmk,behavior-macro";
 label = "macro_kinesis";
