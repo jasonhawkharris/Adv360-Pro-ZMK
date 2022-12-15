@@ -43,15 +43,15 @@
 	label = "NUMS_PARENS";
 	#binding-cells = <0>;
 	bindings = <&kp N9>, <&macro_parens>;
-	mods = <(MOD_LSFT)>
-    }
+	mods = <(MOD_LSFT)>;
+    };
     ltgt: comma_lt {
     	compatible = "zmk,behavior-mod-morph";
 	label = "COMMA_LT";
 	#binding-cells = <0>;
 	bindings = <&kp COMMA>, <&macro_carets>;
-	mods = <(MOD_LSFT)>
-    }
+	mods = <(MOD_LSFT)>;
+    };
   };
 
     keymap {
