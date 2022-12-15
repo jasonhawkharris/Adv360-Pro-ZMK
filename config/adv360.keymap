@@ -31,6 +31,27 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+    quotes: single_double_quotes {
+    	compatible = "zmk,behavior-mod-morph";
+    	label = "SINGLE_DOUBLE_QUOTES";
+    	#binding-cells = <0>;
+    	bindings = <&kp SQT>, <&macro_dquotes>;
+    	mods = <(MOD_LSFT)>;
+    };
+    parens: nums_parens {
+    	compatible = "zmk,behavior-mod-morph";
+	label = "NUMS_PARENS";
+	#binding-cells = <0>;
+	bindings = <&kp N9, <&macro_parens>;
+	mods = <(MOD_LSFT)>
+    }
+    ltgt: comma_lt {
+    	compatible = "zmk,behavior-mod-morph";
+	label = "COMMA_LT";
+	#binding-cells = <0>;
+	bindings = <&kp COMMA, <&macro_carets>;
+	mods = <(MOD_LSFT)>
+    }
   };
 
     keymap {
@@ -39,10 +60,10 @@
 
         default_layer {
             bindings = <
- &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4    &kp N5             &tog 1     &mo 3         &kp N6     &kp N7     &kp N8          &kp N9        &kp N0        &kp MINUS
+ &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4    &kp N5             &tog 1     &mo 3         &kp N6     &kp N7     &kp N8          &parens        &kp N0        &kp MINUS
    &kp TAB      &kp Q     &kp W     &kp E      &kp R     &kp T              &none     &none          &kp Y      &kp U      &kp I           &kp O         &kp P         &kp BSLH
-   &kp ESC      &kp A     &kp S     &kp D      &kp F     &kp G              &none  &kp LGUI       &kp LALT                             &kp RCTRL      &kp RGUI            &none     &kp H   &kp J      &kp K    &kp L  &kp SEMI  &kp SQT
- &kp LSHFT      &kp Z     &kp X     &kp C      &kp V     &kp B              &none     &none       &kp HOME      &none      &none       &kp PG_UP         &none            &none     &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH      &kp RSHFT
+   &kp ESC      &kp A     &kp S     &kp D      &kp F     &kp G              &none  &kp LGUI       &kp LALT                             &kp RCTRL      &kp RGUI            &none     &kp H   &kp J      &kp K    &kp L  &kp SEMI  &quotes
+ &kp LSHFT      &kp Z     &kp X     &kp C      &kp V     &kp B              &none     &none       &kp HOME      &none      &none       &kp PG_UP         &none            &none     &kp N   &kp M  &ltgt  &kp DOT  &kp FSLH      &kp RSHFT
      &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT  &kp BSPC            &kp DEL   &kp END  &macro_ctrl_b  &kp ENTER  &kp SPACE  &kp DOWN_ARROW  &kp UP_ARROW  &macro_brackets  &kp RBKT   &mo 2
             >;
         };
